@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Movies from "./components/movies";
+import Layout from "./components/layout";
+import ThemeProvider from "./context/ThemeContext";
+import { useState } from "react";
 
 function App() {
+  const [categorie, setCategorie] = useState();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Layout>
+        <Movies categorie={categorie} setCategorie={setCategorie} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 
