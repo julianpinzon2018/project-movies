@@ -95,13 +95,12 @@ const MoviesStyled = styled.div`
     }
   }
   #header-container {
-    padding-block: 1rem;
+    padding: 1rem;
     display: block;
     position: relative;
-    inline-size: 100vw;
+    inline-size: 100%;
     position: fixed;
     box-shadow: 0px 10px 10px -6px black;
-    padding-inline: 1rem;
     box-sizing: border-box;
   }
   h1 {
