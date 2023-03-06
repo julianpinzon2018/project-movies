@@ -323,6 +323,7 @@ const Movies = ({ categorie, setCategorie }) => {
         </div>
         <div>
           <select className="select-css" onChange={handleOption}>
+            <option value="">Favorites</option>
             <option value={53}>Action</option>
             <option value={878}>Fiction</option>
             <option value={16}>Animation</option>
