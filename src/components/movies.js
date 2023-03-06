@@ -247,6 +247,18 @@ const MoviesStyled = styled.div`
       inline-size: 5rem;
       padding-inline: 0.5rem;
     }
+
+    form {
+      input {
+        inline-size: 40%;
+        font-size: 1.2rem;
+      }
+
+      button {
+        block-size: 2.5rem;
+        inset-inline-end: 30%;
+      }
+    }
   }
 `;
 
@@ -330,7 +342,7 @@ const Movies = ({ categorie, setCategorie }) => {
             onChange={(e) => setSearchKey(e.target.value)}
           />
           <button>
-            <SearchSvgrepoCom />
+            <SearchSvgrepoCom className="search" />
           </button>
         </form>
       </div>
