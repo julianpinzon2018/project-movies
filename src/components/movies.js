@@ -243,7 +243,7 @@ const MoviesStyled = styled.div`
     }
 
     .select-css {
-      inline-size: 6.5rem;
+      inline-size: 8rem;
       padding-inline: 0.5rem;
     }
 
