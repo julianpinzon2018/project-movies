@@ -188,7 +188,7 @@ const MoviesStyled = styled.div`
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
   }
   .select-css::-ms-expand {
     display: none;
