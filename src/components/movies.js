@@ -235,8 +235,7 @@ const MoviesStyled = styled.div`
       grid-template-columns: repeat(2, 1fr);
     }
     .contenedor .pelicula {
-      max-inline-size: 12rem;
-      inline-size: 10rem;
+      inline-size: 9rem;
       text-align: center;
     }
   }
