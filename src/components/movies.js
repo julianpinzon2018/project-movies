@@ -274,7 +274,7 @@ const MoviesStyled = styled.div`
     }
 
     .select-css {
-      inset-block-end: 60%;
+      inset-block-end: 65%;
       /* inset-block-start: 1rem; */
     }
   }
