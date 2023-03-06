@@ -19,11 +19,13 @@ const MoviesStyled = styled.div`
     max-width: 1500px;
     margin: 12rem auto 2rem auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(7rem, 14rem)); */
     gap: 2rem;
   }
   .contenedor .pelicula {
-    max-inline-size: 15rem;
+    min-inline-size: 8rem;
+    inline-size: 12rem;
     text-align: center;
   }
   .contenedor .pelicula .titulo {
@@ -166,75 +168,72 @@ const MoviesStyled = styled.div`
       background-color: var(--dark);
       box-shadow: none;
     }
-
-    a {
-      position: relative;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      top: 56.25px;
-      left: 3.75px;
-      font-size: 5px;
-      text-decoration: none;
-      color: var(--link);
-      font-weight: bold;
-      text-align: center;
-    }
-
-    a:hover {
-      color: var(--link-hover);
-    }
   }
-  .select {
-    position: absolute;
-    block-size: 2rem;
 
-    border: none;
+  .select-css {
+    position: absolute;
+    inset-inline-end: 1rem;
+    inset-block-end: 1rem;
+    z-index: 2;
+    inline-size: 8rem;
+    display: block;
     font-size: 1rem;
-    padding-inline: 0.5rem;
-    border-radius: 0.25rem;
-    color: black;
+    font-family: "Verdana", sans-serif;
+    font-weight: 400;
+    color: #444;
+    padding: 0.4rem 1.4rem 0.3rem 0.8rem;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.03);
+    border-radius: 0.3em;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    inset-inline-end: 1.5rem;
+    background-color: #fff;
   }
-  .select::-ms-expand {
+  .select-css::-ms-expand {
     display: none;
   }
-  .select:hover {
+  .select-css:hover {
     border-color: #888;
   }
-  .select:focus {
+  .select-css:focus {
     border-color: #aaa;
     box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
     box-shadow: 0 0 0 3px -moz-mac-focusring;
     color: #222;
     outline: none;
   }
-  .categories {
-    position: absolute;
-    inset-inline-end: 2rem;
-    inset-block-end: 1rem;
-    display: flex;
-    gap: 0.3rem;
-    z-index: 2;
- 
+  .select-css option {
+    font-weight: normal;
   }
-  .categories div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+
+  .classOfElementToColor:hover {
+    background-color: red;
+    color: black;
   }
-  #genre {
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 0.25rem;
-    background: none;
+
+  .select-css option[selected] {
+    background-color: orange;
   }
-  #genre:hover {
-    transform: scale(0.9); 
-    transition: 0.3s;
-    cursor: pointer;
-    box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7); */
+
+  @media screen and (max-width: 1200px) {
+    .contenedor {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .contenedor {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .contenedor {
+      column-gap: 3rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 `;
 
@@ -278,6 +277,11 @@ const Movies = ({ categorie, setCategorie }) => {
     listMovies();
   }, [pagina, categorie]);
 
+  function handleOption(event) {
+    console.log(event.target.value);
+    setCategorie(event.target.value);
+  }
+
   const { toggleTheme, theme } = useTheme();
 
   return (
@@ -292,66 +296,16 @@ const Movies = ({ categorie, setCategorie }) => {
             <a href="https://dribbble.com/shots/14199649-Dark-Light-Mode-Toggle-Switch-Pattern-A11y"></a>
           </div>
         </div>
-        <div className="categories">
-          <div>
-            <button
-              id="genre"
-              className={theme}
-              onClick={() => setCategorie(53)}
-            >
-              Action
-            </button>
-
-            <button
-              id="genre"
-              className={theme}
-              onClick={() => setCategorie(878)}
-            >
-              Fiction
-            </button>
-
-            <button
-              id="genre"
-              className={theme}
-              onClick={() => setCategorie(16)}
-            >
-              Animation
-            </button>
-            <button
-              id="genre"
-              className={theme}
-              onClick={() => setCategorie(27)}
-            >
-              Terror
-            </button>
-          </div>
-
-          <div>
-            <button
-              id="genre"
-              className={theme}
-              onClick={() => setCategorie(80)}
-            >
-              Crime
-            </button>
-            <button
-              id="genre"
-              className={theme}
-              onClick={() => setCategorie(12)}
-            >
-              Adventure
-            </button>
-            <button
-              id="genre"
-              className={theme}
-              onClick={() => setCategorie(35)}
-            >
-              Comedy
-            </button>
-            <button id="genre" className={theme} onClick={() => setCategorie()}>
-              Favorites
-            </button>
-          </div>
+        <div>
+          <select className="select-css" onChange={handleOption}>
+            <option value={53}>Action</option>
+            <option value={878}>Fiction</option>
+            <option value={16}>Animation</option>
+            <option value={27}>Terror</option>
+            <option value={80}>Crime</option>
+            <option value={12}>Adventure</option>
+            <option value={35}>Comedy</option>
+          </select>
         </div>
 
         <h1>Cinetino</h1>
