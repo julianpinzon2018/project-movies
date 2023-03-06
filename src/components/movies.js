@@ -233,10 +233,14 @@ const MoviesStyled = styled.div`
     .contenedor {
       column-gap: 3rem;
       grid-template-columns: repeat(2, 1fr);
-    }
-    .contenedor .pelicula {
-      inline-size: 9rem;
-      text-align: center;
+      .pelicula {
+        inline-size: 9rem;
+        text-align: center;
+        margin: 0;
+        .titulo {
+          margin: 0;
+        }
+      }
     }
   }
 `;
