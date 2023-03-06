@@ -182,7 +182,7 @@ const MoviesStyled = styled.div`
     color: #444;
     padding: 0.4rem 1.4rem 0.3rem 0.8rem;
     box-sizing: border-box;
-    border: 1px solid #aaa;
+    border: 1px solid gray;
     box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.03);
     border-radius: 0.3em;
     -moz-appearance: none;
