@@ -243,7 +243,7 @@ const MoviesStyled = styled.div`
     }
 
     .select-css {
-      inline-size: 8rem;
+      inline-size: 6rem;
       padding-inline: 0.5rem;
     }
 
@@ -267,9 +267,7 @@ const MoviesStyled = styled.div`
         inline-size: 9rem;
       }
     }
-    .select-css {
-      inline-size: 5rem;
-    }
+
     form {
       input {
         font-size: 1.3rem;
