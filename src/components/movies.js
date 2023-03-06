@@ -269,13 +269,14 @@ const MoviesStyled = styled.div`
 
     form {
       input {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
     }
 
     .select-css {
       inset-block-end: 60%;
-    /* inset-block-start: 1rem; */
+      /* inset-block-start: 1rem; */
+    }
   }
 
   @media screen and (max-width: 300px) {
