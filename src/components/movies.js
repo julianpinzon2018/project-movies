@@ -231,11 +231,10 @@ const MoviesStyled = styled.div`
 
   @media screen and (max-width: 760px) {
     .contenedor {
-      column-gap: 3rem;
+      column-gap: 4rem;
       grid-template-columns: repeat(2, 1fr);
       .pelicula {
-        inline-size: 9rem;
-        text-align: center;
+        inline-size: 14rem;
         margin: 0;
         .titulo {
           margin: 0;
@@ -244,7 +243,7 @@ const MoviesStyled = styled.div`
     }
 
     .select-css {
-      inline-size: 5rem;
+      inline-size: 6rem;
       padding-inline: 0.5rem;
     }
 
@@ -257,6 +256,27 @@ const MoviesStyled = styled.div`
       button {
         block-size: 2.5rem;
         inset-inline-end: 30%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .contenedor {
+      column-gap: 3rem;
+      .pelicula {
+        inline-size: 9rem;
+      }
+    }
+    .select-css {
+      inline-size: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .contenedor {
+      column-gap: 1rem;
+      .pelicula {
+        inline-size: 4rem;
       }
     }
   }

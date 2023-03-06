@@ -37,10 +37,20 @@ background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); background
   }
   @media screen and (max-width: 760px) {
     :root {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    :root {
       font-size: 11px;
     }
   }
 
+  @media screen and (max-width: 300px) {
+    :root {
+      font-size: 10px;
+    }
+  }
 
 
 `;
