@@ -248,13 +248,13 @@ const MoviesStyled = styled.div`
 
     form {
       input {
-        inline-size: 40%;
+        inline-size: 45%;
         font-size: 1.2rem;
       }
 
       button {
         block-size: 2.5rem;
-        inset-inline-end: 30%;
+        inset-inline-end: 27%;
       }
     }
   }
