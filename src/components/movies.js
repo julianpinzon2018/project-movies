@@ -174,6 +174,7 @@ const MoviesStyled = styled.div`
     inset-block-end: 1rem;
     z-index: 2;
     inline-size: 8rem;
+    block-size: 2.46rem;
     display: block;
     font-size: 1rem;
     font-family: "Verdana", sans-serif;
@@ -273,7 +274,7 @@ const MoviesStyled = styled.div`
     }
 
     .select-css {
-      inset-block-end: 65%;
+      /* inset-block-end: 65%; */
       /* inset-block-start: 1rem; */
     }
   }
