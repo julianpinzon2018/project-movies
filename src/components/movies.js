@@ -234,6 +234,11 @@ const MoviesStyled = styled.div`
       column-gap: 3rem;
       grid-template-columns: repeat(2, 1fr);
     }
+    .contenedor .pelicula {
+      max-inline-size: 12rem;
+      inline-size: 10rem;
+      text-align: center;
+    }
   }
 `;
 
