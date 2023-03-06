@@ -326,7 +326,7 @@ const Movies = ({ categorie, setCategorie }) => {
         <form onSubmit={searchMovies}>
           <input
             type="text"
-            placeholder="search movie"
+            placeholder="search"
             onChange={(e) => setSearchKey(e.target.value)}
           />
           <button>
