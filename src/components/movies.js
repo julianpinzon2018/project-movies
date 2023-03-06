@@ -20,7 +20,6 @@ const MoviesStyled = styled.div`
     margin: 12rem auto 2rem auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* grid-template-columns: repeat(auto-fill, minmax(7rem, 14rem)); */
     gap: 2rem;
   }
   .contenedor .pelicula {
@@ -273,6 +272,10 @@ const MoviesStyled = styled.div`
         font-size: 1.3rem;
       }
     }
+
+    .select-css {
+      inset-block-end: 60%;
+    /* inset-block-start: 1rem; */
   }
 
   @media screen and (max-width: 300px) {
