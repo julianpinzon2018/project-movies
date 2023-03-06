@@ -270,6 +270,11 @@ const MoviesStyled = styled.div`
     .select-css {
       inline-size: 5rem;
     }
+    form {
+      input {
+        font-size: 1.3rem;
+      }
+    }
   }
 
   @media screen and (max-width: 300px) {
