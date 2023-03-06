@@ -119,16 +119,16 @@ const MoviesStyled = styled.div`
 
     .toggle-switch {
       position: relative;
-      width: 75px;
+      width: 4.6875rem;
     }
 
     label {
       position: absolute;
       width: 100%;
-      height: 40px;
+      height: 2.5rem;
       background-color: var(--dark);
 
-      border-radius: 50px;
+      border-radius: 3.125rem;
       cursor: pointer;
     }
 
@@ -152,19 +152,19 @@ const MoviesStyled = styled.div`
     .slider::before {
       content: "";
       position: absolute;
-      top: 5.4px;
-      left: 6px;
-      width: 28.125px;
-      height: 28.125px;
+      top: 0.3375rem;
+      left: 0.375rem;
+      width: 1.7578125rem;
+      height: 1.7578125rem;
 
       border-radius: 50%;
-      box-shadow: inset 12px -4px 0px 0px var(--light);
+      box-shadow: inset 0.75rem -4px 0px 0px var(--light);
       background-color: var(--dark);
       transition: 0.3s;
     }
 
     input:checked ~ .slider::before {
-      transform: translateX(36.625px);
+      transform: translateX(2.2890625rem);
       background-color: var(--dark);
       box-shadow: none;
     }
@@ -321,7 +321,7 @@ const Movies = ({ categorie, setCategorie }) => {
         <form onSubmit={searchMovies}>
           <input
             type="text"
-            placeholder="Find your movie"
+            placeholder="search movie"
             onChange={(e) => setSearchKey(e.target.value)}
           />
           <button>
