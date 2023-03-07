@@ -1,16 +1,18 @@
 import Movies from "./components/movies";
 import Layout from "./components/layout";
 import ThemeProvider from "./context/ThemeContext";
-import { useState } from "react";
+import Header from "./components/header";
+import LogicContextProvider from "./context/LogicContext";
 
 function App() {
-  const [categorie, setCategorie] = useState();
-
   return (
     <ThemeProvider>
-      <Layout>
-        <Movies categorie={categorie} setCategorie={setCategorie} />
-      </Layout>
+      <LogicContextProvider>
+        <Layout>
+          <Header />
+          <Movies />
+        </Layout>
+      </LogicContextProvider>
     </ThemeProvider>
   );
 }
