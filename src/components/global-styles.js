@@ -314,7 +314,7 @@ background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); background
 
     #searchStyled {
       .select-css {
-        inline-size: 6.5rem;
+        inline-size: 7rem;
       }
     }
   }
