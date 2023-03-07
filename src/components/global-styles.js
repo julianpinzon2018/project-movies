@@ -11,15 +11,14 @@ const GlobalStylesStyled = createGlobalStyle`
 
 body {
   margin: 0;
-}
-.darko {
-background: -webkit-linear-gradient(360deg,#224e4d 10%,#083023 360%); background: linear-gradient(360deg,#224e4d 10%,#083023 360%);
-  color: #ffe; 
-}
-
-.lighto {
-background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); background: linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%);
-  color: #002;
+  .darko {
+  background: -webkit-linear-gradient(360deg,#224e4d 10%,#083023 360%); background: linear-gradient(360deg,#224e4d 10%,#083023 360%);
+    color: #ffe; 
+  }
+  .lighto {
+  background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); background: linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%);
+    color: #002;
+  }
 }
 
   #searchStyled {
@@ -125,7 +124,6 @@ background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); background
     inset-inline-end: 1rem;
     inset-block-end: 1rem;
     z-index: 2;
-    /* inline-size: 8rem; */
     block-size: 2.46rem;
     display: block;
     font-size: 1rem;
@@ -216,9 +214,7 @@ background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); background
   }
 
 }
-
   }
-
 
      @media screen and (max-width: 1200px) {
     :root {
@@ -260,7 +256,6 @@ background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); background
     }
 #searchStyled {
   .select-css {
-    /* inline-size: 6rem; */
     padding-inline: 0.5rem;
   }
   form {
@@ -309,12 +304,6 @@ background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); background
         .pelicula {
           inline-size: 4rem;
         }
-      }
-    }
-
-    #searchStyled {
-      .select-css {
-        /* inline-size: 6rem; */
       }
     }
   }

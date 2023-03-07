@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { IMAGE } from "../services/settings";
 import { useEffect, useLayoutEffect } from "react";
 import NextSvgrepoCom from "../icons/next-svgrepo-com";
 import BackSvgrepoCom from "../icons/back-svgrepo-com";
@@ -9,7 +8,7 @@ import { useContext } from "react";
 const MoviesStyled = styled.div``;
 
 const Movies = () => {
-  const { movies, searchKey, listMovies, categorie, pagina, setPagina } =
+  const { movies, searchKey, listMovies, categorie, pagina, setPagina, IMAGE } =
     useContext(LogicContext);
 
   useEffect(() => {
