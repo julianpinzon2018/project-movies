@@ -20,7 +20,7 @@ function Search() {
   }
 
   return (
-    <SearchStyled id="searchStyled">
+    <SearchStyled className={theme} id="searchStyled">
       <div className="toggle">
         <div className="toggle-switch">
           <label>
